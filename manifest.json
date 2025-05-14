@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Shopify Detector",
+  "version": "1.0",
+  "description": "Detects if a website is built with Shopify.",
+  "permissions": ["scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_icon": "icons/shopify.png",
+    "default_title": "Shopify Detector"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "icons/shopify48x48.png"
+  }
+}
